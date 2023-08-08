@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Topinvest</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    body {
+        font-size: 28px;
+        font-family: Arial;
+        margin-top: 30px;
+    }
+
+    body {
+            background-image: url('Background.7.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }z
+
+    nav {
+        text-align: center;
+        background-color: #f2f2f2;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+
+    nav a {
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
+        margin-left: 15px;
+    }
+
+    .footer {
+        background-color:white;
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+
+    .footer p {
+        margin: 0;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    label, select, input {
+        margin-bottom: 10px;
+    }
+
+    select#currencyType {
+        margin-bottom: 20px;
+    }
+
+    .continue-button {
+        display: center;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+
+    .continue-button a {
+        background-color: green;
+        color: white;
+        border-radius: 4px;
+        font-size: 18px;
+        padding: 10px 20px;
+        text-decoration: none;
+    }
+
+</style>
+
+<body>
+    <nav>
+        <img src="images/imageslogo.png" alt="Logo">
+        <a href="HomePage.html">Home Page</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact Us.html">Contact Us</a>
+        <a href="Transaction.html">Transactions</a>
+        <a href="login.html">login</a>
+    </nav>
+
+    <body>
+        <main>
+            <form id="investmentForm">
+                <label>
+                    Currency Type:
+                    <select id="currencyType">
+                        <option value="usd">USD</option>
+                        <option value="eur">EUR</option>
+                        <option value="gbp">GBP</option>
+                        <option value="sgd">SGD</option>
+                    </select>
+                </label>
+                <label>
+                    Amount:
+                    <input type="number" id="amount" step="0.01" required>
+                </label>
+
+                <div class="continue-button">
+                    <a href="AfterContinue.html" id="continue-button">Click to continue</a>
+                </div>
+            </main>
+           
+        
+            <div class="footer">
+                <p>&copy; 2023 Topinvest, Inc. All Rights Reserved.</p>
+            </div>
+        
+            <script src="scripts.js"></script>
+        </body>
+        </html>
+
+ 
+
+

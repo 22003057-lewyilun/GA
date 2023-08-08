@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Topinvest</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    body {
+        font-size: 28px;
+        font-family: Arial;
+        margin-top: 30px;
+    }
+
+    body {
+            background-image: url('Background.5.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+    nav {
+        text-align: center;
+        background-color: #f2f2f2;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+
+
+    nav a {
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
+        margin-left: 15px;
+    }
+
+    .footer {
+        background-color:white;
+        padding: 10px;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+
+    .footer p {
+        margin: 0;
+    }
+
+    .payment-methods {
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .payment-methods label {
+        cursor: pointer;
+    }
+
+    .bank-transfer-details,
+    .password-details {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .payment-methods label {
+        cursor: pointer;
+    }
+
+    .bank-transfer-details,
+    .password-details,
+    .credit-card-details {
+        display: none;
+        margin-top: 20px;
+    }
+
+
+</style>
+
+<body>
+    <nav>
+        <img src="images/imageslogo.png" alt="Logo">
+        <a href="HomePage.html">Home Page</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact Us.html">Contact Us</a>
+        <a href="Transaction.html">Transactions</a>
+        <a href="login.html">login</a>
+    </nav>
+
+    <div class="payment-methods">
+        <label>
+            <input type="radio" name="paymentMethod" value="creditCard" onclick="togglePaymentDetails()">
+            Credit Card
+        </label>
+        <label>
+            <input type="radio" name="paymentMethod" value="bankTransfer" onclick="togglePaymentDetails()">
+            Bank Transfer
+        </label>
+
+        <!-- Credit Card details -->
+        <div class="credit-card-details" id="creditCardDetails" required> 
+            <div class = "row">
+            <label>
+                Full Name:
+                <input type="text" id="fullName" required>
+            </label>
+        </div>
+        
+        <div class = "row">
+            <label>
+                Card Number:
+                <input type="text" id="cardNumber" required>
+            </label>
+        </div>
+
+        <div class = "row">
+            <label>
+                CCV:
+                <input type="text" id="ccv" required>
+            </label>
+        </div>
+        
+        <div class = "row">
+            <label>
+                Expiry Date:
+                <input type="text" id="expiryDate" required>
+            </label>
+        </div>
+    
+    </div>
+
+
+        <!-- Bank Transfer details -->
+        <div class="bank-transfer-details" id="bankTransferDetails">
+            <label>
+                Bank Account Number:
+                <input type="text" id="bankAccountNumber" required>
+            </label>
+        </div>
+
+        <!-- Password details -->
+        <div class="password-details" id="passwordDetails">
+            <label>
+                Password:
+                <input type="password" id="password" required>
+            </label>
+        </div>
+
+
+        <div class="continue-button">
+            <button type="button" id="payment-button" onclick="redirectToSuccessfulPage()">Payment</button>
+        </div>
+    </div>
+
+    
+    <div class="footer">
+        <p>&copy; 2023 Topinvest, Inc. All Rights Reserved.</p>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        function togglePaymentDetails() {
+            var creditCardOption = document.querySelector('input[name="paymentMethod"][value="creditCard"]');
+            var bankTransferOption = document.querySelector('input[name="paymentMethod"][value="bankTransfer"]');
+            var bankTransferDetails = document.getElementById("bankTransferDetails");
+            var passwordDetails = document.getElementById("passwordDetails");
+            var creditCardDetails = document.getElementById("creditCardDetails");
+
+            if (creditCardOption.checked) {
+                bankTransferDetails.style.display = "none";
+                passwordDetails.style.display = "none";
+                creditCardDetails.style.display = "block";
+            } else if (bankTransferOption.checked) {
+                bankTransferDetails.style.display = "block";
+                passwordDetails.style.display = "block";
+                creditCardDetails.style.display = "none";
+            }
+        }
+
+        function redirectToSuccessfulPage() {
+        // Check if the required fields are filled in
+        var creditCardOption = document.querySelector('input[name="paymentMethod"][value="creditCard"]');
+        var bankTransferOption = document.querySelector('input[name="paymentMethod"][value="bankTransfer"]');
+        var fullName = document.getElementById("fullName").value;
+        var cardNumber = document.getElementById("cardNumber").value;
+        var ccv = document.getElementById("ccv").value;
+        var expiryDate = document.getElementById("expiryDate").value;
+
+        if (creditCardOption.checked && (!fullName || !cardNumber || !ccv || !expiryDate)) {
+            alert("Please fill in all the Credit Card details.");
+            return;
+        }
+
+        var bankAccountNumber = document.getElementById("bankAccountNumber").value;
+        var password = document.getElementById("password").value;
+
+        if (bankTransferOption.checked && (!bankAccountNumber || !password)) {
+            alert("Please fill in all the Bank Transfer details.");
+            return;
+        }
+
+        console.log("Payment successful. Redirecting to the success page...");
+        window.location.href = "Suscessful.html";
+    }
+
+
+    </script>
+</body>
+</html>

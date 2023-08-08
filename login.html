@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Topinvest</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Bootstrap CSS Link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 900px;
+        margin-top: 20px;
+        border-radius: 10%;
+    }
+
+    body {
+        background-image: url('Background.3.avif');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .footer {
+      background-color:white;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 30px;
+    }
+
+    .image-container img {
+        margin-left: 20px;
+        width: auto;
+        height: 250px;
+    }
+
+    .container {
+        display: flex;
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 5px 5px #ccc;
+    }
+
+    .form-container {
+        flex-grow: 1;
+        padding: 20px;
+    }
+
+    .article-container {
+        margin-top: 20px;
+        display: flex;
+    }
+
+    .menu-bar {
+        background-color: #f2f2f2;
+        padding: 10px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input[type="Submit"] {
+        background-color: red;
+        color: black;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        margin: 0;
+        font-weight: bold;
+        transition: background-color 0.8s ease, color 0.4s ease;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        border-radius: 5px;
+        padding: 10px;
+        border: 1px solid black;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    input[type="Submit"]:hover {
+        background-color: rgb(37, 218, 37);
+        color: white;
+        font-weight: bold;
+    }
+
+    label {
+        display: inline-block;
+        width: 480px;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .bold {
+        font-weight: bold;
+        font-size: 28px;
+    }
+
+    nav img {
+            margin-right: 8px;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+    .menu-bar a {
+        font-size: 30px;
+        color: black;
+        text-decoration: none;
+        margin-left: 15px;
+    }
+
+    .logo {
+        margin-right: 15px;
+    }
+
+    .styled-img {
+        width: 500px;
+        height: 500px;
+    }
+</style>
+
+<body>
+    <div class="menu-bar">
+        <img src="images/imageslogo.png" alt="Logo">
+        <a href="HomePage.html">Home Page</a>
+        <a href="Services.html">Services</a>
+        <a href="Contact Us.html">Contact Us</a>
+        <a href="Transaction.html">Transactions</a>
+        <a href="login.html">login</a>
+        </a>
+    </div>
+
+    <section>
+        <div class="article-container">
+            <div class="container">
+                <p class="bold">Login</p>
+                <div class="form-container">
+                    <form action="HomePage.html" method="post">
+                        <label for="name">Full Name:</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                        <label for="email">User Email:</label><br>
+                        <input type="text" id="email" name="email" required><br>
+                        <label for="pw">Password:</label><br>
+                        <input type="password" id="pw" name="pw" required><br><br>
+                        <input type="Submit" value="Login"><br><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        </section>
+        
+    <div class="footer">
+        <p>&copy; 2023 Topinvest, Inc. All Rights Reserved.</p>
+    </div>
+
+</body>
+
+</html>

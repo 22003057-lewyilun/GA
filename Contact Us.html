@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Topinvest</title>
+  <title>Contact Form with contact-us Section</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: white;
+    }
+
+    body {
+        background-image: url('Background.2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .header {
+      text-align: center;
+      background-color: #f2f2f2;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .header a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+    }
+
+    .container {
+      display: flex;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 5px 5px #ccc;
+    }
+
+    .form-container {
+      flex-grow: 1;
+      padding: 20px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border-radius: 5px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color:green;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .contact-us {
+      flex-grow: 1;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact-us h2,
+    .contact-us p {
+      text-align: center;
+      margin: 5px 0;
+    }
+
+    .contact-us img {
+      width: 150px;
+      height: auto;
+      margin-top: 20px;
+    }
+
+    .footer {
+      background-color:white;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <img src="images/imageslogo.png" alt="Logo">
+    <a href="HomePage.html">Home Page</a>
+    <a href="Services.html">Services</a>
+    <a href="Contact Us.html">Contact Us</a>
+    <a href="Transaction.html">Transactions</a>
+    <a href="login.html">login</a>
+  </div>
+
+  <div class="container">
+    <div class="form-container">
+      <form>
+        <label for="Name">Full Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="Email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="Message">Message:</label><br>
+        <textarea id="message" name="message" rows="8" cols="35" required></textarea><br>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <div class="Contact Us">
+      <h2>Contact Us</h2>
+      <p>Email: topinvest@gmail.com</p>
+      <p>Phone: +65 9876 8888</p>
+      <p>Address: 88 Sengkang Road, #11-12, Singapore 654321</p>
+      <p>Website: www.topinvest.com</p>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2023 Topinvest, Inc. All Rights Reserved.</p>
+  </div>
+</body>
+
+</html>
