@@ -2,6 +2,25 @@
 <html>
 
 <head>
+            <!--
+
+     I declare that this code was written by me. 
+
+     I will not copy or allow others to copy my code. 
+
+     I understand that copying code is considered as plagiarism.
+
+ 
+
+     Student Name: Lew Yi Lun
+
+     Student ID: 22003057
+
+     Class: E63C
+
+     Date/Time Last modified: 14/8/2023
+
+       -->
     <title>Topinvest</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,7 +104,7 @@
 <body>
     <nav>
         <img src="images/imageslogo.png" alt="Logo">
-        <a href="index.html">Home Page</a>
+        <a href="homepage.html">Home Page</a>
         <a href="Services.html">Services</a>
         <a href="Contact Us.html">Contact Us</a>
         <a href="Transaction.html">Transactions</a>
@@ -107,14 +126,14 @@
             <div class = "row">
             <label>
                 Full Name:
-                <input type="text" id="fullName" required>
+                <input type="text" id="fullName" class="alphabet-input"required>
             </label>
         </div>
         
         <div class = "row">
             <label>
                 Card Number:
-                <input type="text" id="cardNumber" required>
+                <input type="text" id="cardNumber" class="numeric-input" inputmode="numeric"required>
             </label>
         </div>
 
@@ -139,7 +158,7 @@
         <div class="bank-transfer-details" id="bankTransferDetails">
             <label>
                 Bank Account Number:
-                <input type="text" id="bankAccountNumber" required>
+                <input type="text" id="bankAccountNumber" class="numeric-input" inputmode="numeric"required>
             </label>
         </div>
 
@@ -182,8 +201,8 @@
             }
         }
 
+        // Check the required fields are filled in or not
         function redirectToSuccessfulPage() {
-        // Check if the required fields are filled in
         var creditCardOption = document.querySelector('input[name="paymentMethod"][value="creditCard"]');
         var bankTransferOption = document.querySelector('input[name="paymentMethod"][value="bankTransfer"]');
         var fullName = document.getElementById("fullName").value;
@@ -207,6 +226,43 @@
         console.log("Payment successful. Redirecting to the success page...");
         window.location.href = "Suscessful.html";
     }
+
+
+    //this code is for full name of credit card.(must insert alphabet)
+    document.addEventListener("DOMContentLoaded", function() {
+    var fullNameInput = document.getElementById("fullName");
+    fullNameInput.addEventListener("input", restrictToAlphabet);
+});
+
+function restrictToAlphabet(event) {
+    var input = event.target;
+    var sanitizedValue = input.value.replace(/[^A-Za-z ]/g, '');
+    input.value = sanitizedValue;
+}
+
+    //this code is card num of credit card(must insert num)
+    document.addEventListener("DOMContentLoaded", function() {
+    var cardNumberInput = document.getElementById("cardNumber");
+    cardNumberInput.addEventListener("input", restrictToNumeric);
+});
+
+function restrictToNumeric(event) {
+    var input = event.target;
+    var sanitizedValue = input.value.replace(/\D/g, '');
+    input.value = sanitizedValue;
+}
+
+    //this code is acc of bank transfer(only can insert num)
+    document.addEventListener("DOMContentLoaded", function() {
+    var bankAccountNumberInput = document.getElementById("bankAccountNumber");
+    bankAccountNumberInput.addEventListener("input", restrictToNumeric);
+});
+
+function restrictToNumeric(event) {
+    var input = event.target;
+    var sanitizedValue = input.value.replace(/\D/g, '');
+    input.value = sanitizedValue;
+}
 
 
     </script>
