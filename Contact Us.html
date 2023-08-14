@@ -66,6 +66,11 @@
       padding: 20px;
     }
 
+    .article-container {
+        margin-top: 20px;
+        display: flex;
+    } 
+
     input,
     textarea {
       width: 100%;
@@ -127,29 +132,30 @@
 <body>
   <div class="header">
     <img src="images/imageslogo.png" alt="Logo">
-    <a href="homepage.html">Home Page</a>
+    <a href="index.html">Home Page</a>
     <a href="Services.html">Services</a>
     <a href="Contact Us.html">Contact Us</a>
     <a href="Transaction.html">Transactions</a>
     <a href="login.html">login</a>
   </div>
 
-  
-  <div class="container">
-    <div class="form-container">
-      <form>
-        <label for="Name">Full Name:</label><br>
-        <input type="text" id="name" name="name" required><br>
+  <section>
+    <div class="article-container"></div>
+      <div class="container">
+        <div class="form-container">
+          <form action="submitsuccess.html" method="post">
 
-        <label for="Email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br>
+          <label for="Name">Full Name:</label><br>
+          <input type="text" id="name" name="name" required><br>
 
-        <label for="Problem">Problem:</label><br>
-        <textarea id="Problem" name="Problem" rows="8" cols="35" required></textarea><br>
+          <label for="Email">Email:</label><br>
+          <input type="email" id="email" name="email" required><br>
+
+          <label for="Problem">Problem:</label><br>
+          <textarea id="Problem" name="Problem" rows="8" cols="35" required></textarea><br>
 
         <input type="submit" value="Submit">>
-      </form>
-    </div>
+
 
     <div class="Contact Us">
       <h2>Contact Us</h2>
@@ -159,6 +165,12 @@
       </a>
     </div>
   </div>
+
+</form>
+</div>
+</div>
+</div>
+  </section>
 
 
   <div class="footer">
